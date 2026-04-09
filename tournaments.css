@@ -1,0 +1,359 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: hsl(223, 82%, 7%);
+    color: white;
+}
+a { text-decoration: none; color: inherit; }
+
+/* Header */
+header {
+    padding: 20px;
+    font-family: playfair display; 
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: white;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li {
+    margin-left: 20px;
+}
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #22c55e;
+}
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+.hero-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    font-family: inter;
+    text-shadow: 0 0 12px rgba(22, 159, 204, 0.3);
+}
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color:hsl(208, 41%, 92%);
+}
+.hero img {
+    max-width: 45%;
+    border-radius: 12px;
+}
+
+.pic{
+        margin-top: 35px;
+}
+
+#about{
+    padding: 20px;
+}
+
+#about h2{
+    font-family: inter;
+    color: #22c55e;
+}
+
+#about p{
+      color: hsl(208, 41%, 92%);
+}
+
+.features-section {
+ /*    position: relative;
+    justify-content: space-evenly;
+    */
+    padding: 20px;
+
+}
+
+.features {
+    display: flex;
+    gap: clamp(10px, 2vw, 20px);
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.features::-webkit-scrollbar{
+    display: none;
+}
+.feature-card {
+    flex: 0 0 auto;
+    max-width:300px;
+    width: clamp(160px, 20vw, 240px);
+    padding: clamp(8px, 2vw, 15px);
+    height: auto;
+    min-height: 340px;
+    background:hsl(222, 47%, 11%);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;  
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: transform 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.feature-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/*phone */
+@media(max-width: 600px){
+    .features-card{
+        width: 220px;
+        height: auto;
+    }
+}
+
+/*tablet */
+@media(max-width: 900px){
+    .features-card{
+        width: 260px;
+        height: 320px;
+    }
+}
+
+.games-title{
+   text-align:center;
+   font-family: inter;
+   color: #22c55e;
+}
+.feature-card p {
+    padding: 0 15px 15px;
+    color: hsl(208, 41%, 92%);
+    margin: 15px 0 10px;
+}
+
+/* Rules */
+#rules {
+    padding: 40px 20px;
+    text-align: center;
+}
+#rules ul {
+    list-style: disc;
+    display: inline-block;
+    text-align: left;
+    padding-left: 20px;
+    color: hsl(208, 41%, 92%);
+    font-family: roboto;
+}
+#rules h2{
+     font-family: inter;
+     color: #22c55e;
+}
+
+.past{
+    text-align:center;
+    font-family: inter;
+}
+
+.history-section {
+    position: relative;
+    justify-content: space-evenly;
+    padding: 20px;
+
+}
+
+.history {
+    display: flex;
+    gap: clamp(10px, 2vw, 20px);
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.history::-webkit-scrollbar{
+    display: none;
+}
+.history-card {
+    flex: 0 0 auto;
+    max-width: 300px;
+    width: clamp(160px, 20vw, 240px);
+    padding: clamp(8px, 2vw, 15px);
+    height: auto;
+    min-height: 340px;
+    background:hsl(222, 47%, 11%);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;  
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: transform 0.3s ease;
+}
+.history-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.history-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.history-section h2{
+     font-family: inter;
+      color: hsl(208, 41%, 92%);
+      color: #22c55e;
+      text-align:center;
+}
+
+
+@media(max-width: 600px){
+    .history-card{
+        width: 220px;
+        height: auto;
+    }
+}
+
+/*tablet */
+@media(max-width: 900px){
+    .history-card{
+        width: 260px;
+        height: 320px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text, .hero img {
+        max-width: 100%;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul.active {
+        display: flex;
+        background: #0a1128;
+        padding: 10px 0;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+} 
+
+.history-card p {
+    padding: 0 15px 15px;
+      margin: 15px 0 10px;
+         color: hsl(208, 41%, 92%);
+         font-family: roboto;
+}
+
+/* Contact */
+#contact {
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#contact h2{
+    font-family: open sans;
+}
+
+.btn-snap {
+    background: #1B9D4A;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin-bottom: 20px;
+    font-family: roboto;
+}
+
+.btn-snap:hover {
+    background: #126932;
+}
+
+.btn-forms {
+    background: #1B9D4A;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin-top: 20px;
+    font-family: roboto;
+}
+
+.btn-forms:hover {
+    background: #126932;
+}
+
+
+#contact img{
+   border-radius: 20px;
+}
+
+/* Footer */
+footer {
+    background-image: radial-gradient(hsl(226, 60%, 20%));
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/*card h3{
+font-size: clamp(16px, 2vw, 22px); */
