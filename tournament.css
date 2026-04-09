@@ -139,26 +139,12 @@ nav ul li a:hover {
 .feature-card img {
     width: 100%;
     height: auto;
-    border-radius: 5%;
+    border-radius: 1%;
     object-fit: cover;
     margin-bottom: 10px;
 }
 
-/*phone */
-@media(max-width: 600px){
-    .features-card{
-        width: 220px;
-        height: auto;
-    }
-}
 
-/*tablet */
-@media(max-width: 900px){
-    .features-card{
-        width: 260px;
-        height: 320px;
-    }
-}
 
 .games-title{
    text-align:center;
