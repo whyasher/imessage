@@ -106,23 +106,21 @@ nav ul li a:hover {
 }
 
 .features {
-    display: flex;
+  display: flex;
     gap: clamp(10px, 2vw, 20px);
-    overflow: auto;
-    scroll-behavior: smooth;
+    overflow-x: auto;
+    padding-bottom: 10px; /* gives room for scrolling */
+    scroll-snap-type: x mandatory;
     scrollbar-width: none;
-    -ms-overflow-style: none;
 }
 
 .features::-webkit-scrollbar{
     display: none;
 }
 .feature-card {
-    flex: 0 0 auto;
-    max-width:300px;
-    width: clamp(160px, 20vw, 240px);
-    padding: clamp(8px, 2vw, 15px);
-    height: auto;
+  flex: 0 0 clamp(180px, 22vw, 250px); /* ⭐ magic line */
+    scroll-snap-align: start;
+    padding: clamp(10px, 2vw, 16px);
     min-height: 340px;
     background:hsl(222, 47%, 11%);
     backdrop-filter: blur(10px);
@@ -197,30 +195,28 @@ nav ul li a:hover {
 }
 
 .history-section {
-    position: relative;
-    justify-content: space-evenly;
+    /*position: relative;
+    justify-content: space-evenly;*/
     padding: 20px;
 
 }
 
 .history {
-    display: flex;
+       display: flex;
     gap: clamp(10px, 2vw, 20px);
-    overflow: auto;
-    scroll-behavior: smooth;
+    overflow-x: auto;
+    padding-bottom: 10px; /* gives room for scrolling */
+    scroll-snap-type: x mandatory;
     scrollbar-width: none;
-    -ms-overflow-style: none;
 }
 
 .history::-webkit-scrollbar{
     display: none;
 }
 .history-card {
-    flex: 0 0 auto;
-    max-width: 300px;
-    width: clamp(160px, 20vw, 240px);
-    padding: clamp(8px, 2vw, 15px);
-    height: auto;
+flex: 0 0 clamp(180px, 22vw, 250px); /* ⭐ magic line */
+    scroll-snap-align: start;
+    padding: clamp(10px, 2vw, 16px);
     min-height: 340px;
     background:hsl(222, 47%, 11%);
     backdrop-filter: blur(10px);
@@ -239,7 +235,7 @@ nav ul li a:hover {
 .history-card img {
     width: 100%;
     height: auto;
-    border-radius: 10%;
+    border-radius: 5%;
     object-fit: cover;
     margin-bottom: 10px;
 }
@@ -252,20 +248,6 @@ nav ul li a:hover {
 }
 
 
-@media(max-width: 600px){
-    .history-card{
-        width: 220px;
-        height: auto;
-    }
-}
-
-/*tablet */
-@media(max-width: 900px){
-    .history-card{
-        width: 260px;
-        height: 320px;
-    }
-}
 
 @media screen and (max-width: 768px) {
     .hero {
@@ -292,7 +274,6 @@ nav ul li a:hover {
 
 .history-card p {
     padding: 0 15px 15px;
-      margin: 15px 0 10px;
          color: hsl(208, 41%, 92%);
          font-family: roboto;
 }
