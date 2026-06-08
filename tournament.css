@@ -11,7 +11,7 @@ a { text-decoration: none; color: inherit; }
 /* Header */
 header {
     padding: 20px;
-    font-family: playfair display; 
+    font-family: roboto; 
 }
 
 nav {
@@ -20,7 +20,7 @@ nav {
     align-items: center;
 }
 nav .logo {
-    font-size: 2.8rem;
+    font-size: 2.7rem;
     font-weight: bold;
     color: white;
 }
@@ -65,14 +65,14 @@ nav ul li a:hover {
     max-width: 50%;
 }
 .hero-text h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
     font-family: inter;
     text-shadow: 0 0 12px rgba(22, 159, 204, 0.3);
 }
 .hero-text p {
     font-size: 1.1rem;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     color:hsl(208, 41%, 92%);
 }
 .hero img {
@@ -85,7 +85,7 @@ nav ul li a:hover {
 }
 
 #about{
-    padding: 20px;
+    padding: 5px 20px;
 }
 
 #about h2{
@@ -95,21 +95,22 @@ nav ul li a:hover {
 
 #about p{
       color: hsl(208, 41%, 92%);
+      text-align: center;
+}
+
+.past{
+    text-align:center;
+    font-family: inter;
 }
 
 .features-section {
- /*    position: relative;
-    justify-content: space-evenly;
-    */
-    padding: 20px;
-
+    padding: 5px 20px;
 }
 
 .features {
   display: flex;
     gap: clamp(10px, 2vw, 20px);
     overflow-x: auto;
-    padding-bottom: 10px; /* gives room for scrolling */
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
 }
@@ -118,9 +119,9 @@ nav ul li a:hover {
     display: none;
 }
 .feature-card {
-  flex: 0 0 clamp(180px, 22vw, 250px); /* ⭐ magic line */
+  flex: 0 0 clamp(180px, 22vw, 250px); 
     scroll-snap-align: start;
-    padding: clamp(10px, 2vw, 16px);
+    padding: clamp(10px, 2vw, 10px);
     min-height: 340px;
     background:hsl(222, 47%, 11%);
     backdrop-filter: blur(10px);
@@ -136,15 +137,14 @@ nav ul li a:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
+
 .feature-card img {
     width: 100%;
     height: auto;
-    border-radius: 1%;
-    object-fit: cover;
-    margin-bottom: 10px;
+    border-radius: 5%;
+    object-fit: contain;
+    margin-bottom: 5px;
 }
-
-
 
 .games-title{
    text-align:center;
@@ -152,21 +152,22 @@ nav ul li a:hover {
    color: #22c55e;
 }
 .feature-card p {
-    padding: 0 15px 15px;
+    padding: 0 2px;
     color: hsl(208, 41%, 92%);
-    margin: 15px 0 10px;
+    margin: 2px 0 0 0;
 }
 
 /* Rules */
 #rules {
-    padding: 40px 20px;
+    padding: 5px 20px;
     text-align: center;
 }
 #rules ul {
     list-style: disc;
     display: inline-block;
     text-align: left;
-    padding-left: 20px;
+    margin: 0;
+    padding: 0 0 20px 0;
     color: hsl(208, 41%, 92%);
     font-family: roboto;
 }
@@ -175,23 +176,15 @@ nav ul li a:hover {
      color: #22c55e;
 }
 
-.past{
-    text-align:center;
-    font-family: inter;
-}
 
 .history-section {
-    /*position: relative;
-    justify-content: space-evenly;*/
-    padding: 20px;
-
+    padding: 5px 20px;
 }
 
 .history {
-       display: flex;
+    display: flex;
     gap: clamp(10px, 2vw, 20px);
     overflow-x: auto;
-    padding-bottom: 10px; /* gives room for scrolling */
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
 }
@@ -202,7 +195,7 @@ nav ul li a:hover {
 .history-card {
 flex: 0 0 clamp(180px, 22vw, 250px); /* ⭐ magic line */
     scroll-snap-align: start;
-    padding: clamp(10px, 2vw, 16px);
+    padding: clamp(10px, 2vw, 10px);
     min-height: 340px;
     background:hsl(222, 47%, 11%);
     backdrop-filter: blur(10px);
@@ -223,7 +216,7 @@ flex: 0 0 clamp(180px, 22vw, 250px); /* ⭐ magic line */
     height: auto;
     border-radius: 5%;
     object-fit: cover;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .history-section h2{
@@ -233,7 +226,9 @@ flex: 0 0 clamp(180px, 22vw, 250px); /* ⭐ magic line */
       text-align:center;
 }
 
-
+.history-section h3{
+    margin: 2px;
+}
 
 @media screen and (max-width: 768px) {
     .hero {
@@ -259,14 +254,15 @@ flex: 0 0 clamp(180px, 22vw, 250px); /* ⭐ magic line */
 } 
 
 .history-card p {
-    padding: 0 15px 15px;
-         color: hsl(208, 41%, 92%);
-         font-family: roboto;
+    padding: 0 9px;
+    color: hsl(208, 41%, 92%);
+     font-family: roboto;
+    margin: 10px;
 }
 
 /* Contact */
 #contact {
-    padding: 40px 20px;
+    padding: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -274,8 +270,10 @@ flex: 0 0 clamp(180px, 22vw, 250px); /* ⭐ magic line */
     margin: 0 auto;
 }
 
-#contact h2{
-    font-family: open sans;
+#contact h3{
+    font-family: roboto;
+    margin: 3px 0;
+    padding-top: 5px;
 }
 
 .btn-snap {
@@ -305,21 +303,66 @@ flex: 0 0 clamp(180px, 22vw, 250px); /* ⭐ magic line */
 }
 
 .btn-forms:hover {
-    background: #126932;
+    background: #126932;    
 }
 
+form {
+    width: 360px;
+    margin: 20px 0 0 0;
+    padding: 20px;
+    background: hsl(222, 47%, 11%);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
 
-#contact img{
-   border-radius: 20px;
+input {
+    width: 80%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+#registerForm h3{
+    font-family: roboto;
+}
+
+#registerForm p:first-of-type{
+    font-family: roboto;
+}
+
+button {
+    width: 40%;
+    margin-top: 5px;
+    padding:10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+#registerForm p:last-of-type{
+    font-family: roboto;
+}
+
+input:focus {
+    border-color: #4CAF50;
 }
 
 /* Footer */
 footer {
     background-image: radial-gradient(hsl(226, 60%, 20%));
     color: white;
-    padding: 15px 0;
+    padding: 2px 0;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 /*card h3{
