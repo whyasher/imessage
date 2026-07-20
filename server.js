@@ -24,12 +24,12 @@ db.connect(err => {
 
 app.post('/register', (req, res) => {
 
-    const { name, email } = req.body;
+    const { name, gameid } = req.body;
 
     const sql =
-        'INSERT INTO registrations (name,email) VALUES (?,?)';
+        'INSERT INTO registrations (name,gameid) VALUES (?,?)';
 
-    db.query(sql, [name, email], (err, result) => {
+    db.query(sql, [name, gameid], (err, result) => {
 
         if (err) {
             return res.status(500).json(err);
