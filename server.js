@@ -24,6 +24,9 @@ db.connect(err => {
 
 app.post('/register', (req, res) => {
 
+    console.log(req.body);
+
+    
     const { name, gameid } = req.body;
 
     const sql =
